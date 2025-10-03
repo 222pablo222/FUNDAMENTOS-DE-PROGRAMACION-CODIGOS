@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main () {
+    float p;
+    float costo;
+    
+    printf ("ingrese el peso de la carta: \n");
+    scanf ("%f", &p);
+    
+    if (p>0 && p<50){
+        costo = 1.5;
+        printf ("el precio de envio es: Bs %.2f\n", costo);
+    }
+    else if (p>50 && p<=200){
+        costo = 4;
+        printf ("el precio de envio es: Bs %.2f\n", costo);
+    }
+    else if (p>200 && p<=350){
+        costo = 8;
+        printf ("el precio de envio es: Bs %.2f\n", costo);
+    }
+    else if (p>350 && p<=500){
+        costo = 12;
+        printf ("el precio de envio es: Bs %.2f\n", costo);
+    }
+    else if (p>500){
+        printf ("NO SE PUEDE ENVIAR POR CARTA");
+    }
+    else {
+        printf ("peso invalido, debe ser mayor a 0\n");
+    }
+    
+    return 0;
+}
