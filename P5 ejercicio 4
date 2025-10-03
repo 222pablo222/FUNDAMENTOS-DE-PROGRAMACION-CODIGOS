@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main (){
+    int h1, m1, s1;
+    int h2, m2, s1;
+    int dh, dm ds;
+    
+    printf ("ingrese la primera hora (hh mm ss): \n");
+    scanf ("%d %d %d", &h1, &m1, &s1);
+    
+    printf ("ingrese la segunda hora (hh mm ss): \n");
+    scanf ("%d %d %d", &h2, &m2, &s2);
+    
+    int t1 = h1 * 3600 + m1 * 60 + s1;
+    int t2 = h2 * 3600 + m2 * 60 + s2;
+    
+    int dt = t2 - t1;
+    
+    dh = dt / 3600;
+    dt = dt % 3600;
+    dm = dt / 60;
+    ds = dt % 60;
+    printf ("el tiempo transcurrido es: %d:%d:%d\n", dh, dm, ds);
+    
+return 0
+}
