@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(){
+    double a, b, c, d, e, f, D, Dx, Dy, X, Y;
+    printf ("Para el siguiente sistema de ecuaciones\n");
+    printf ("aX + bY = c\n");
+    printf ("dX + eY = f\n");
+    printf ("ingresar (a b c d e f):\n");
+    scanf ("%lf %lf %lf %lf %lf %lf", &a, &b, &c, &d, &e, &f);
+    
+    D = a * e - b * d;
+if (D == 0) {
+    printf("el sistema no tiene una unica solucion");
+}
+else {
+    Dx = c * e - b * f;
+    Dy = a * f - d * c;
+    
+    X = Dx / D;
+    Y = Dy / D;
+    printf ("El valor de X es: %.4lf\n", X);
+    printf ("El valor de Y es: %.4lf\n", Y);
+}
+return 0;
+    
+}
