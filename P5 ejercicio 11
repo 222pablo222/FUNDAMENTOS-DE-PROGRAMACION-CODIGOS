@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <math.h>
+int main () {
+    float f, cu, ci ,t, Acu, Aci, Atr, L, r, b, h;
+    printf ("cual es tu forma 1=cuadrado 2=circulo 3=triangulo:\n");
+    scanf ("%f", &f);
+    if (f == 1){
+        printf ("Cuanto vale su lado: \n");
+        scanf ("%f", &L);
+        Acu = L * L;
+        printf ("el area del cuadrado es: %.2f\n", Acu);
+        return 1;
+    }
+    else if (f == 2){
+        printf ("cuanto vale su radio:\n");
+        scanf ("%f", &r);
+        Aci = M_PI * r * r;
+        printf ("El area es: %.2f\n", Aci);
+        return 2;
+    }
+    else if (f == 3){
+        printf ("Cuanto vale su base y su altura(bb hh):\n");
+        scanf ("%f %f", &b, &h);
+        Atr = (b * h) / 2;
+        printf ("el area es: %.2f\n", Atr);
+        return 3;
+    }
+    else {
+        printf("ingrese una forma\n");
+    }
+    return 0;
+}
