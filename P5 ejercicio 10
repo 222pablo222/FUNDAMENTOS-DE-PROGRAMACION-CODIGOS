@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main () {
+    float h, hq, p, s, PT;
+    printf ("ingrese la cantidad de items (h hq p s):\n");
+    scanf ("%f %f %f %f", &h, &hq, &p, &s);
+    PT = h * 3 + hq * 5 + p * 2 + s *2.5 ;
+    printf ("El total de gasto es: Bs%.2f\n", PT);
+    return 0;
+}
