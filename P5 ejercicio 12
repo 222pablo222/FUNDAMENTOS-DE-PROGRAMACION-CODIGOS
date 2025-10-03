@@ -1,0 +1,37 @@
+#include <stdio.h>
+int main () {
+    float np1, np2, ep, ef, f, nf;
+    int e;
+    do {
+    printf ("ingrese su nota del primer parcial: \n");
+    scanf ("%f", &np1);
+    printf ("ingrese su nota del segundo parcial:\n");
+    scanf ("%f", &np2);
+    printf ("ingrese su nota del examen practico:\n");
+    scanf ("%f", &ep);
+    printf ("ingrese su nota del examen final:\n");
+    scanf ("%f", &ef);
+    printf ("cuantas faltas tienes:\n");
+    scanf ("%f", &f);
+    if (f > 9.6) {
+        nf = ((np1 + np2 + ep) * 6) / 30;
+    }
+    else {
+        nf = ((np1 + np2 + ep) * 6) / 30 + ef * 4 /10;
+    }
+    if (nf >= 51) {
+        printf ("el promedio es: %.2f\n", nf);
+        printf ("aprobado\n");
+    }
+    else {
+        printf ("el promedio es: %.2f\n", nf);
+        printf ("no aprobado\n");
+    }
+    printf ("Hay mas estudiantes? si=1 no=0:\n");
+    scanf ("%d", &e);
+    }
+    while (e == 1);
+    printf("Fin del programa.\n");
+    return 0;
+}
+    
